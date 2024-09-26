@@ -65,10 +65,11 @@ const handleback=()=>{
   return (
     <div className='mainContainer'>
       <Sidebar/>
+      <div className='cotainer'>
       <div className='secondContainer'>
       
         <div className='project_details'>
-          <div className='breadcrumbs'>
+          <div className='breadcrumbs' style={{marginLeft:"0%",marginTop:"2%"}}>
           <ul className="ulist">
         <Link
           to={"/home_page"}
@@ -88,38 +89,27 @@ const handleback=()=>{
         
       </ul>
           </div>
-        <div className='details'>
-          <div className='project'>
-          <h3>Project ID   :    </h3>
-          <label>{id}</label>
-          </div>
-          <div className='project'>
-          <h3>Project Name :     </h3>
-          <label>{projectData.name}</label>
-          
-          </div>
-          <div className='project'>
-          <h3>Created By   :     </h3>
-          <label>{projectData.created_by}</label>
-          </div>
-          <div className='project'>
-          <h3>Amount       :     </h3>
-          <label>{projectData.amount}</label>
-          </div>
-          <div className='project'>
-          <h3>Cost         :     </h3>
-          <label>{projectData.cost}</label>
-          </div>
-          <div className='project'>
-          <h3>Start Date   :     </h3>
-          <label>{projectData.start_date}</label>
-          </div>
-          <div className='project'>
-          <h3>End Date     :   </h3>
-          <label> {projectData.end_date} </label>
-          </div>
-          
-        </div>
+          <div className='details_of_progressandproject'>
+  <div className='partOneofdetails'>
+    <div className='projectdetailspart'>Project ID   :</div>
+    <div className='projectdetailspart'>Project Name :</div>
+    <div className='projectdetailspart'>Created By   :</div>
+    <div className='projectdetailspart'>Amount       :</div>
+    <div className='projectdetailspart'>Cost         :</div>
+    <div className='projectdetailspart'>Start Date   :</div>
+    <div className='projectdetailspart'>End Date     :</div>
+  </div>
+  <div className='partTwoofdetails'>
+    <div className='labelsdetailspart'>{id}</div>
+    <div className='labelsdetailspart'>{projectData.name}</div>
+    <div className='labelsdetailspart'>{projectData.created_by}</div>
+    <div className='labelsdetailspart'>{projectData.amount}</div>
+    <div className='labelsdetailspart'>{projectData.cost}</div>
+    <div className='labelsdetailspart'>{projectData.start_date}</div>
+    <div className='labelsdetailspart'>{projectData.end_date}</div>
+  </div>
+</div>
+
         </div>
         <div className='pie_chart'>
           <div className='heading' style={{display:"flex",flexDirection:"row",margin:"0",height:"26px",marginTop:"2%"}}>
@@ -139,7 +129,7 @@ const handleback=()=>{
       ]}
       width={500}
       height={270}
-      marginTop={"5px"}
+      marginTop={"10px"}
     />
         </div>
       </div>
@@ -169,6 +159,7 @@ const handleback=()=>{
                     </TableBody>
                 </Table>
             </TableContainer>
+      </div>
       </div>
     </div>
   );

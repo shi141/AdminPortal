@@ -5,58 +5,98 @@
     box-sizing: border-box;
   }
   
+.progress{
+  background-color: #fff;
+}
+
   .mainContainer {
-    width: 100%;
-    height: 95vh;
+    /* width: 100%;
+    height: 95vh;*/
     padding: 0;
-    margin: 0;
+    margin: 0; 
     display: flex;
     flex-direction: row;
+    gap:20px;
   }
-  
+  .cotainer{
+    background: #fff;
+  flex: 1;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.5rem; */
+  /* width: auto; */
+  width: 1000px;
+  height: 700px;
+  justify-content: space-between;
+  }
+
   .secondContainer {
     display: flex;
     width: 100%;
     height: 50%;
     margin-top: 0;
+    margin:0;
   }
   
   .project_details {
-    background-color: rgb(233, 235, 255);
+    background-color: rgb(255, 255, 255);
     flex-grow: 1;
   }
   
   .pie_chart {
-    background-color: rgb(233, 235, 255);
+    background-color: rgb(255, 255, 255);
     flex-grow: 1;
   }
   
   .progress_logs {
     border-top: 1px solid grey;
-    background-color: rgb(238, 232, 255);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 50%;
     padding: 0;
     overflow-y: auto;
   }
   
-  .details {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 10px 20px;
-    padding: 2%;
+  
+  .details_of_progressandproject {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
   }
   
-  .project {
+  .partOneofdetails, .partTwoofdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+    flex-grow: 1; 
+  }
+  
+  .labelsdetailspart {
     display: flex;
     align-items: center;
+    margin-bottom: 1px; 
+    padding: 5px;
+    font-size: 18.5px; 
+    margin-left: 3%;
   }
+  .projectdetailspart{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px; 
+    padding: 5px;
+    font-size: 18.5px; 
+    font-weight: bold;
+  }
+
   
   .backButton {
     margin: 10px;
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: lightblue;
+    background-color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
