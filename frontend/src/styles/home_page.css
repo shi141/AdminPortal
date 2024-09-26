@@ -1,0 +1,41 @@
+.dashboard{
+    display: flex;
+    gap: 20px;
+}
+.dashboard--content{
+    background: #fff;
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    /* display: flex; */
+    gap: 1.5rem;
+    justify-content: space-between;
+    /* flex-direction: row; */
+}
+.container_3{
+    
+    display: flex;
+    flex-direction: row;
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 50%;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin:0;
+    padding: 0;
+}
+.container_home1{
+    background-color: rgb(203, 222, 222);
+    height:100%;
+    width: 35%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.horizontal_container_home{
+    width: 100%;
+    background-color: rgb(203, 222, 222);
+    height: 70%;
+    border-radius: 20px;
+    border: 1px solid black;
+}

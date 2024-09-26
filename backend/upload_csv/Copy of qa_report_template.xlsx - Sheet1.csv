@@ -1,0 +1,11 @@
+Test Cases,,,,,,,
+Project Name,QA testing,12/09/2024,,,,,
+Version ,,12/09/2024,,,,,
+Test case Design By,,total cases,,,,,
+Peer Review By,,Pass:,,,,,
+Approved By,,Fail:,,,,,
+,,,,,,,
+,,,,,,,
+Test ID,Test Scenario,Test cases,Test Data ,Expected Result,Actual Result,Remark/ Observations,Priority(P0/P1/P2)
+Login_1,Login with valid credentials,User should be able to access the home page,-user enteres username & password,Home page opens,Home page opens,the eye button to view password does'nt work,
+Login_2,Login with invalid username and password,User shoul not be able to access home page,-user enters username & password ,,,,

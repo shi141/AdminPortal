@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}"/>
+</head>
+<body>
+    <section class="container">
+        <header>User Detail</header>
+        <form action="/create_user" class="form" method="post">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Full Name" required/>
+            </div>
+            <div class="input-box">
+                <label>E-Mail</label>
+                <input type="text" id="mail" name="mail" placeholder="Enter E-Mail" required/>
+            </div>
+            <div class="input-box">
+                <label>Contact Number</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter Contact Number" required/>
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label>Department</label>
+                    <input type="text" id="dept" name="dept" placeholder="Enter department name" required/>
+                </div>
+                <div class="input-box">
+                    <label>Role</label>
+                    <input type="text" name="role" id="role" placeholder="Enter user role" />
+                </div>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </section>
+</body>
+</html>

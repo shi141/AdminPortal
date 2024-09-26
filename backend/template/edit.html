@@ -1,0 +1,30 @@
+{%inclue 'header.html' %}
+<title>User registration</title>
+</head>
+<body>
+    <div class="container">
+        {%include 'menus.html' %}
+        <br>
+        <h3>User registration</h3>
+        <br>
+        <form action="{{url_for('edit')}} method="post"></form>
+        {% if message is defined and message%}
+            <div class="message">{{message}}</div>
+        {% endif x}
+        <div class="FORM">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="{{edituser.name}}">
+
+        </div>
+        <div class="FORM">
+            <label for="role">Role:</label>
+            <input type="text" name="role" value="{{edituser.role}}">
+            
+        </div>
+        <div class="FORM">
+            <label for="username">username:</label>
+            <input type="text" name="username" value="{{edituser.username}}">
+            
+        </div>
+    </div>
+</body>

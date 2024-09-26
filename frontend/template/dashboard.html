@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}"/>
+</head>
+<body>
+    <div class="filter">
+        
+    </div>
+        <table>
+            <thead>
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">DEPARTMENT</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ROLE</th>
+                <th></th>
+                <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for user in user_data%}
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                    
+                        <td>
+                        {%if user[4]%}
+                        {{user[4]}}
+                        {%else%}
+                        <select id="myDropdown-{{ user[0]}}">
+                        <option value="">Please select an option</option>
+                        {% for role in role_data %}
+                            <option value="{{role[0]}}">{{role[0]}}</option>
+                        {% endfor %}
+                    </select>
+                    {%endif%}</td>
+                    <td><button type="button" class="button2"  onclick="getSelectedValue('{{ user[0] }}','myDropdown-{{ user[0] }}')" >ASSIGN ROLE</button></td>
+                    <td><button type="button" class="button2" onclick="openwindowupdate('{{user[0]}}')">UPDATE</button></td>
+                {%endfor%}
+                </tr>
+            </tbody>
+            </table>
+      <script>
+        // function openwindowupdate(){
+        //   <a href='update.html'>hello</a>
+        //   urll='template/update.html'
+        //   window.open(urll);
+        // }
+        function openwindowupdate(userID){
+            alert(userID)
+            if (userID) {
+              {
+                alert(userID);
+                var user=userID
+                var url = `/update_list?user=${encodeURIComponent(user)}`;
+
+                // Send a GET request to the Flask route
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken') // If using CSRF protection
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    window.location.href = `/show_data?data=${encodeURIComponent(JSON.stringify(data))}`;
+
+                })
+                .catch(error => {
+                    alert('Error:', error);
+                });
+            }}
+            else {
+                alert('No value selected.');
+            }
+
+        }
+
+
+
+        function getSelectedValue(userID,dropdownId) 
+       {
+          var dropdown = document.getElementById(dropdownId);
+        var selectedValue = dropdown.value;
+        
+        
+            if (selectedValue) {
+              {
+                alert(selectedValue);
+                alert(userID);
+                var user=userID
+                var url = `/update_database?userId=${encodeURIComponent(user)}&selectedValue=${encodeURIComponent(selectedValue)}`;
+
+                // Send a GET request to the Flask route
+                fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'X-CSRFToken': getCookie('csrftoken') // If using CSRF protection
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // alert('Database updated successfully');
+                })
+                .catch(error => {
+                    alert('Error:', error);
+                });
+            }}
+            else {
+                alert('No value selected.');
+            }
+        }
+
+        // Helper function to get CSRF token from cookies (if needed)
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          // var dropdown = document.getElementById("myDropdown");
+          // dropdown.addEventListener('change', getSelectedValue);
+        //   var dropdownElements = document.querySelectorAll('select[id^="myDropdown"]');
+        //   dropdownElements.forEach(function(dropdown) {
+        // dropdown.addEventListener('change', function() {
+        //     getSelectedValue(this);
+        });
+        // });});
+      </script>
+      
+</body>
+</html>

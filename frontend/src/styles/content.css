@@ -1,0 +1,30 @@
+.content{
+    width: 75%;
+}
+.content--header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header--title{
+    color: aquamarine;
+}
+.header--activity{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.search--box{
+    background: #ddd;
+    padding: 8px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.search--box input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+}

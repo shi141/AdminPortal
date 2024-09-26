@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>user data</title>
+    </head>
+    <style>
+      
+    </style>
+    <body>
+      <main class="table">
+        <section class="table__header">
+          <h3>user listing</h3>
+        </section>
+        <section class="table__body">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th >ID</th>
+                <th >NAME</th>
+                <th >DEPARTMENT</th>
+                <th >E-MAIL</th>
+                <th >ROLE</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for user in users%}
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                    <td>{{user[4]}}</td>
+                    <td><a href="" class="btn-success">View</a></td>
+                    <td><a href="put.html" class="btn">Edit</a></td>
+                    <td><a href="" class="button">Change</a></td>
+                    <td><a href="" class="btn-success">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.form {
+    margin-top: 15px;
+    width: 100%; /* Ensure the form itself does not exceed the dialog width */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.form .input-box {
+    width: 100%; /* Make input boxes take full width of the form */
+    margin-top: 20px;
+    box-sizing: border-box; /* Prevents input boxes from exceeding the container width */
+}
+
+.input-box label {
+    color: #0b0505;
+}
+
+.form .input-box input {
+    height: 40px;
+    width: 100%; /* Ensure input fields fill their container */
+    margin-top: 8px;
+    outline: none;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+.form .column {
+    display: flex;
+    justify-content: space-between; /* Ensure columns are spaced evenly */
+    column-gap: 10px; /* Space between columns */
+    box-sizing: border-box; /* Prevents columns from exceeding the container width */
+}
+
+.form .column .input-box {
+    flex: 1; /* Allows boxes to adjust based on available space */
+    margin-right: 10px; /* Add margin-right for spacing */
+    box-sizing: border-box; /* Prevents columns from exceeding the container width */
+}
+
+.form .column .input-box:last-child {
+    margin-right: 0; /* Remove margin from the last input in the column */
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+        column-gap: 0; /* Remove column gap on small screens */
+    }
+
+    .form .column .input-box {
+        width: 100%; /* Make columns full width on small screens */
+        margin-right: 0; /* Remove margin on small screens */
+        margin-bottom: 10px; /* Add space between rows on small screens */
+    }
+}
+
+.form button {
+    height: 40px;
+    width: 100%; /* Ensure buttons take full width of the form */
+    background-color: rgb(109, 85, 143);
+    color: #ddd;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease-out;
+    font-weight: 400;
+    box-sizing: border-box; /* Prevents buttons from exceeding the container width */
+}
+
+.form button:hover {
+    background-color: rgb(109, 85, 143);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+/* Container for the sidebar */
+.menu {
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(0, 52, 150);
+    color: white;
+    transition: width 0.3s ease; /* Smooth transition for retracting */
+    overflow: hidden; 
+    border-radius: 20px;
+  }
+  
+
+  .menu.closed {
+    width: 60px; /* Sidebar width when closed */
+  }
+  
+  /* Toggle button style */
+  .toggle-button {
+    /* text-align: right;
+    margin-right: auto; */
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+
+  }
+  
+  .toggle-button button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 0;
+    margin-left: auto;
+    /* margin-left: 100%; */
+  }
+  
+  /* Logo style */
+  .logo {
+    text-align: center;
+    /* padding: 20px; */
+  }
+  
+  /* Menu items */
+  .menu--list {
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    margin: 0;
+  }
+  .menu--list .a{
+    font-size: 100px;
+    width: 100%;
+    
+  }
+  
+  .menu--list .item {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .menu--list .item:hover {
+    background-color: #555;
+  }
+  
+  .menu--list .item svg {
+    margin-right: 10px;
+    font-size: 22px;
+  }
+  
+  /* Hide text when the sidebar is closed */
+  .menu.closed .item {
+    justify-content: center;
+  }
+  
+  .menu.closed .item svg {
+    margin-right: 0;
+  }
+  .menu.closed .toggle-button{
+    /* background-color:rgb(64, 118, 218) ; */
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    /* background-color: blanchedalmond; */
+  }
+  .menu.closed .toggle-button .button{
+    margin-left: 0%;
+    margin-right: 100%;
+    /* background-color: aqua; */
+  }

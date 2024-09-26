@@ -1,0 +1,150 @@
+/* *{
+  background-color: #d2d6e1;
+} */
+.main{
+  justify-content: center;
+  align-items: center;
+  /* height: 100%;
+  width: 100%; */
+  color: #02050e;
+  /* background-color: #325bcc; */
+}
+
+.Container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width:65vh;
+  /* background-color: #325bcc; */
+  border:2px solid;
+  padding-bottom: 6%;
+  margin-top: 4%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.loginbutton{
+  width:100%;
+  height: 30%;
+}
+
+.loginbutton .account{
+  font-size:20px;
+  margin-left:20%;
+}
+.regsterutton{
+  padding-right: 0%;
+  display: flex;
+}
+.register{
+  font-size: 23px;
+  background-color: transparent;
+  color: rgb(64, 118, 218);
+  height: 50px;
+  width: 30px;
+  margin-top: 0%;
+  border:none;
+  margin-left: 2%;
+}
+.login{
+  background-color: rgb(64, 118, 218);
+  color: rgb(255, 255, 255);
+  height: 50px;
+  width: 90%;
+  margin-top: 4%;
+  font-size: 27px;
+  border: none;
+  margin-left:5%;
+  box-shadow: 0px 0px 1px 1px rgb(0,0,0);
+  outline-color: transparent;
+  outline-style:solid;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.register:hover {
+  color:#325bcc;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.login:hover {
+  background-color:#325bcc;
+  transition: 0.7s;
+  cursor:pointer;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  margin-top: 10%;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(15, 0, 0);
+}
+
+/* .button .registerbutton{
+  background-color: aqua;
+  color: #04AA6D;
+} */
+
+.resultContainer,
+.historyItem {
+  flex-direction: row;
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.historyContainer {
+  flex-direction: column;
+  display: flex;
+  height: 200px;
+  align-items: center;
+  flex-grow: 5;
+  justify-content: flex-start;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inputContainer > .errorLabel {
+  color: red;
+  font-size: 12px;
+  width:80%;
+}
+
+.inputBox1 {
+  height: 57px;
+  width: 300x;
+  font-size: large;
+  border: 2px solid black;
+  padding-left: 8px;
+  margin-top: 5%;
+}
+.inputBox2{
+  height: 57px;
+  width: 300px;
+  font-size: large;
+  border: 2px solid black;
+  padding-left: 8px;
+  margin-top: 1%;
+}
+

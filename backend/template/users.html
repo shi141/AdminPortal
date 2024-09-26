@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>user data</title>
+    </head>
+    <body>
+        <h3>user listing</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th >ID</th>
+                <th >NAME</th>
+                <th >DEPARTMENT</th>
+                <th >E-MAIL</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for user in users%}
+                <tr>
+                    <td>{{user[0]}}</td>
+                    <td>{{user[1]}}</td>
+                    <td>{{user[2]}}</td>
+                    <td>{{user[3]}}</td>
+                    <td><a href="{{url_for('view',userid=user.userid)}}" class="btn-success">View</a></td>
+                    <td><a href="{{url_for('edit',userid=user.userid)}}" class="btn">Edit</a></td>
+                    <td><a href="{{url_for('password_change',userid=user.userid)}}" class="button">Change</a></td>
+                    <td><a href="{{url_for('delete',userid=user.userid)}}" class="btn-success">Delete</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+    </body>
+</html>
