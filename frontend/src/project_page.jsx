@@ -10,6 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { Link } from "react-router-dom";
+import Sidebar from "./components/sidebar";
 
 function Project_page() {
   const { id } = useParams();
@@ -63,7 +64,7 @@ const handleback=()=>{
 
   return (
     <div className='mainContainer'>
-      
+      <Sidebar/>
       <div className='secondContainer'>
       
         <div className='project_details'>
