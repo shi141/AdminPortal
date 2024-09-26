@@ -24,23 +24,18 @@ app.config['JWT_TOKEN_LOCATION'] = ['headers']
 app.config['CORS_HEADERS'] = 'Content-Type'
 server = 'SRISHTI\MSSQLSERVER01'
 database = 'user'
-driver = '{ODBC Driver 17 for SQL Server}'  # or another driver you have installed
+driver = '{ODBC Driver 17 for SQL Server}' 
 
 connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};Trusted_Connection=yes;'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
- 
-
-# pw_hash = bcrypt.generate_password_hash('hunter2')
-# bcrypt.check_password_hash(pw_hash, 'hunter2')
 
 def get_db_connection():
     conn = pyodbc.connect(connection_string)
     return conn
 
-# CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000/"}})
 
 
 @app.route('/')  
